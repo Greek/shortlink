@@ -88,8 +88,8 @@ func Run() {
 		w.Write([]byte("yeat.dev/" + id))
 	}))
 
-	log.Println("Server started on port 9999")
-	log.Println(http.ListenAndServe(":9999", router))
+	log.Println("Server started on port " + os.Getenv("PORT"))
+	log.Println(http.ListenAndServe(":"+os.Getenv("PORT"), router))
 }
 
 func main() {
