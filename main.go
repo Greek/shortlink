@@ -85,6 +85,7 @@ func Run() {
 			fmt.Println(err)
 			return
 		}
+		defer rdb.Close()
 		w.Write([]byte("yeat.dev/" + id))
 	}))
 
