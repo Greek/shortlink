@@ -86,7 +86,7 @@ func Run() {
 			return
 		}
 		defer rdb.Close()
-		w.Write([]byte("yeat.dev/" + id))
+		w.Write([]byte(id))
 	}))
 
 	log.Println("Server started on port " + os.Getenv("PORT"))
